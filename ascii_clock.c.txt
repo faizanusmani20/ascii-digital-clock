@@ -1,68 +1,11 @@
-
-
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
 
-int main() {
-    time_t now;
-    struct tm *local;
-    char buffer[50];
-
-    while (1) {
-        time(&now);
-        local = localtime(&now);
-
-        // Date first, then time
-        strftime(buffer, sizeof(buffer), "%d-%m-%Y  %I:%M:%S %p", local);
-
-        printf("\r%s", buffer);
-        fflush(stdout);
-        sleep(1);
-    }
-
-    return 0;
-}
-
-		WITH COLOURS
-
-#include <stdio.h>
-#include <time.h>
-#include <unistd.h>
-
-#define YELLOW  "\033[33m"
-#define CYAN    "\033[36m"
-#define RESET   "\033[0m"
-
-int main() {
-    time_t now;
-    struct tm *local;
-    char buffer[50];
-
-    while (1) {
-        time(&now);
-        local = localtime(&now);
-
-        strftime(buffer, sizeof(buffer), "%A, %d %B %Y", local);
-
-        printf("\r%s%s  ", YELLOW, buffer);
-
-        strftime(buffer, sizeof(buffer), "%H:%M:%S", local);
-        printf("%s%s%s", CYAN, buffer, RESET);
-
-        fflush(stdout);
-        sleep(1);
-    }
-
-    return 0;
-}
-
-
-			WITH ASCII ARTS
-
-#include <stdio.h>
-#include <time.h>
-#include <unistd.h>
+/* ASCII Art Digital Clock
+ * -----------------------
+ * Colored header, date and time display
+ */
 
 #define CYAN   "\033[36m"
 #define YELLOW "\033[33m"
@@ -96,7 +39,7 @@ int main() {
         strftime(buffer, sizeof(buffer), "%A, %d %B %Y", local);
         printf(YELLOW "        %s\n\n" RESET, buffer);
 
-        /* TIME */
+        /* TIME (12-hour format with AM/PM) */
         strftime(buffer, sizeof(buffer), "%I:%M:%S %p", local);
         printf(CYAN "            %s\n" RESET, buffer);
 
@@ -106,45 +49,3 @@ int main() {
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
