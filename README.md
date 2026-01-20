@@ -15,9 +15,6 @@ Displays the current date and time in a terminal with colors and a nice ASCII he
 
 ---
 
-
-## Example Output
-
   ██████╗██╗      ██████╗  ██████╗██╗  ██╗
  ██╔════╝██║     ██╔═══██╗██╔════╝██║ ██╔╝
  ██║     ██║     ██║   ██║██║     █████╔╝ 
@@ -28,6 +25,7 @@ Displays the current date and time in a terminal with colors and a nice ASCII he
         Tuesday, 20 January 2026
 
             09:45:12 PM
+
 
 ## Notes
 
