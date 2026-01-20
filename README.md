@@ -15,6 +15,11 @@ Displays the current date and time in a terminal with colors and a nice ASCII he
 
 ---
 
+## Example Output
+```bash
+
+
+
   ██████╗██╗      ██████╗  ██████╗██╗  ██╗
  ██╔════╝██║     ██╔═══██╗██╔════╝██║ ██╔╝
  ██║     ██║     ██║   ██║██║     █████╔╝ 
@@ -25,15 +30,3 @@ Displays the current date and time in a terminal with colors and a nice ASCII he
         Tuesday, 20 January 2026
 
             09:45:12 PM
-
-
-## Notes
-
-ANSI colors may not display correctly on Windows CMD unless ANSI is enabled.
-Infinite loop runs until Ctrl+C is presse
-
-
-
-
-
-
