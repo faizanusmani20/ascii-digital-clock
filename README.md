@@ -15,19 +15,6 @@ Displays the current date and time in a terminal with colors and a nice ASCII he
 
 ---
 
-## How to Run
-
-1. Compile the code:
-
-```bash
-gcc ascii_clock.c -o ascii_clock
-
-2. Run the program:
-
-./ascii_clock
-
-3. The clock will update every second.
-Press Ctrl+C to exit the program.
 
 ## Example Output
 
